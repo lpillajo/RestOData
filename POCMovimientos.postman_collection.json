@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "3ae49ab7-0793-4abb-aa51-acd9641ab2a3",
+		"name": "POCMovimientos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movimientos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:19377/Cuentas/1/Movimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19377",
+					"path": [
+						"Cuentas",
+						"1",
+						"Movimientos"
+					]
+				},
+				"description": "Consulta de movimientos en POC rest\t\t\t\t"
+			},
+			"response": []
+		},
+		{
+			"name": "MovimientosFecha",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:19378/Cuentas/1/Movimientos?fechaInicio=20190101&fechaFin=20200324",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19378",
+					"path": [
+						"Cuentas",
+						"1",
+						"Movimientos"
+					],
+					"query": [
+						{
+							"key": "fechaInicio",
+							"value": "20190101"
+						},
+						{
+							"key": "fechaFin",
+							"value": "20200324"
+						}
+					]
+				},
+				"description": "Consulta de movimientos en POC rest\t\t\t\t"
+			},
+			"response": []
+		},
+		{
+			"name": "MovimientosFiltroMonto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:19378/Cuentas/1/Movimientos?fechaInicio=20200101&fechaFin=20200324&$filter=Monto gt 5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19378",
+					"path": [
+						"Cuentas",
+						"1",
+						"Movimientos"
+					],
+					"query": [
+						{
+							"key": "fechaInicio",
+							"value": "20200101"
+						},
+						{
+							"key": "fechaFin",
+							"value": "20200324"
+						},
+						{
+							"key": "$filter",
+							"value": "Monto gt 5"
+						}
+					]
+				},
+				"description": "Consulta de movimientos en POC rest\t\t\t\t"
+			},
+			"response": []
+		},
+		{
+			"name": "MovimientosFiltroMontoDescripcion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:19378/Cuentas/1/Movimientos?fechaInicio=20200101&fechaFin=20200324&$filter=Monto gt 10  and Descripcion eq 'Descripcio1'",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19378",
+					"path": [
+						"Cuentas",
+						"1",
+						"Movimientos"
+					],
+					"query": [
+						{
+							"key": "fechaInicio",
+							"value": "20200101"
+						},
+						{
+							"key": "fechaFin",
+							"value": "20200324"
+						},
+						{
+							"key": "$filter",
+							"value": "Monto gt 10  and Descripcion eq 'Descripcio1'"
+						}
+					]
+				},
+				"description": "Consulta de movimientos en POC rest\t\t\t\t"
+			},
+			"response": []
+		},
+		{
+			"name": "MovimientosOrdenMonto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:19378/Cuentas/1/Movimientos?fechaInicio=20200101&fechaFin=20200324&$orderby=Monto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19378",
+					"path": [
+						"Cuentas",
+						"1",
+						"Movimientos"
+					],
+					"query": [
+						{
+							"key": "fechaInicio",
+							"value": "20200101"
+						},
+						{
+							"key": "fechaFin",
+							"value": "20200324"
+						},
+						{
+							"key": "$orderby",
+							"value": "Monto"
+						}
+					]
+				},
+				"description": "Consulta de movimientos en POC rest\t\t\t\t"
+			},
+			"response": []
+		},
+		{
+			"name": "MovimientosOrdenMontoDescendente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:19378/Cuentas/1/Movimientos?fechaInicio=20200101&fechaFin=20200324&$orderby=Monto desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19378",
+					"path": [
+						"Cuentas",
+						"1",
+						"Movimientos"
+					],
+					"query": [
+						{
+							"key": "fechaInicio",
+							"value": "20200101"
+						},
+						{
+							"key": "fechaFin",
+							"value": "20200324"
+						},
+						{
+							"key": "$orderby",
+							"value": "Monto desc"
+						}
+					]
+				},
+				"description": "Consulta de movimientos en POC rest\t\t\t\t"
+			},
+			"response": []
+		},
+		{
+			"name": "MovimientosOrdenBeneficiarioDescricpcion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:19378/Cuentas/1/Movimientos?fechaInicio=20200101&fechaFin=20200324&$orderby=Beneficiario,Descripcion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19378",
+					"path": [
+						"Cuentas",
+						"1",
+						"Movimientos"
+					],
+					"query": [
+						{
+							"key": "fechaInicio",
+							"value": "20200101"
+						},
+						{
+							"key": "fechaFin",
+							"value": "20200324"
+						},
+						{
+							"key": "$orderby",
+							"value": "Beneficiario,Descripcion"
+						}
+					]
+				},
+				"description": "Consulta de movimientos en POC rest\t\t\t\t"
+			},
+			"response": []
+		}
+	]
+}
